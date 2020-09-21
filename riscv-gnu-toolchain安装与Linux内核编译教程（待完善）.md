@@ -1,4 +1,4 @@
-# <center>riscv-gnu-toolchain安装教程（待完善）</center>
+# <center>riscv-gnu-toolchain安装与Linux内核编译教程（待完善）</center>
 
 
 ### 一、准备工作
@@ -85,7 +85,10 @@
 
     ```
     git clone https://git.busybox.net/busybox
+    cd busybox
+    CROSS_COMPILE=riscv64-unknown-linux-gnu- make defconfig
+    CROSS_COMPILE=riscv64-unknown-linux-gnu- make -j $(nproc)
     ```
-
+后续工作尚未完成……
     
 
