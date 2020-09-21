@@ -21,7 +21,7 @@
    sudo apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
    ```
 
-6.  创建目录/home/cliff/opt/riscv并更改其权限
+6. 创建目录/home/cliff/opt/riscv并更改其权限
 
    ```
    cd /home
