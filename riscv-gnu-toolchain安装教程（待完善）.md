@@ -1,6 +1,5 @@
 # <center>riscv-gnu-toolchain安装教程（待完善）</center>
 
-[toc]
 
 ### 一、准备工作
 
