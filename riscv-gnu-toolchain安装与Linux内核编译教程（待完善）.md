@@ -46,6 +46,8 @@
 ### 二、编译安装
 0. ***提示：`make`执行会比较花时间，请耐心等待QwQ***
 
+   ***对configure、make、make install感兴趣的同学可访问链接https://www.cnblogs.com/tinywan/p/7230039.html***
+   
 1. 终端切到riscv-gnu-toolchain ***（进行操作前请务必确保当前处于正确的目录下，否则会出现`./configure: no such file or directory`等找不到文件的问题），*** 
    运行：
 
