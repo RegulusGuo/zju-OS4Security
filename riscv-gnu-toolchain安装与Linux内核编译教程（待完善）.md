@@ -45,7 +45,7 @@
 
 ### 二、编译安装
 
-1. 终端切到riscv-gnu-toolchain ***（进行操作前请务必确保当前处于正确的目录下，否则会出现`./configure no such file or directory`等找不到文件的问题），*** 
+1. 终端切到riscv-gnu-toolchain ***（进行操作前请务必确保当前处于正确的目录下，否则会出现`./configure: no such file or directory`等找不到文件的问题），*** 
    运行：
 
    ```
