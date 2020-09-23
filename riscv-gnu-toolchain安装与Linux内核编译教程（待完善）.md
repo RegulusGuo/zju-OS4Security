@@ -45,7 +45,8 @@
    bash ./configure --prefix=/home/cliff/opt/riscv
    ```
 
-2. 若前一步正常，运行：`make`
+2. 若前一步正常，运行：`make`，若提示：`ERROR: glib-2.40 gthread-2.0 is required to compile QEMU`，则参见链接https://blog.csdn.net/fuxy3/article/details/104732541
+
 
 3. make结束后，运行：`riscv64-unknown-elf-gcc`，若提示：`fatal error: no input files`，说明riscv64-unknown-elf-gcc现在已经存在了；
 
