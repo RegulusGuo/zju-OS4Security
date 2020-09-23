@@ -2,8 +2,8 @@
 
 
 ### 一、准备工作
-0. 在进行之后的安装前，先确保虚拟机内存、磁盘足够。个人配置：内存3G，磁盘40G。具体扩容方法自行搜索；
-   注意：以下操作均在普通用户模式下进行，请不要切换到root用户，或随意使用sudo；
+0. **在进行之后的安装前，先确保虚拟机内存、磁盘足够。个人配置：内存3G，磁盘40G。具体扩容方法自行搜索；**
+   ***注意：以下操作均在普通用户模式下进行，请不要切换到root用户，或随意使用sudo；***
 
 1. 下载riscv-gnu-toolchain源码，链接：https://pan.zju.edu.cn/share/7793a0574d4b4dbeb85465f4ad
 
@@ -45,7 +45,8 @@
 
 ### 二、编译安装
 
-1. 终端切到riscv-gnu-toolchain，运行：
+1. 终端切到riscv-gnu-toolchain ***（进行操作前请务必确保当前处于正确的目录下，否则会出现`./configure no such file or directory`等找不到文件的问题），*** 
+   运行：
 
    ```
    bash ./configure --prefix=/home/cliff/opt/riscv
@@ -90,7 +91,7 @@
    make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j $(nproc)
    ```
 
-注：以下步骤需根据老师选择使用的环境（老师说busybox有问题。。。）进行安装
+***注：以下步骤需根据老师选择使用的环境（老师说busybox有问题。。。）进行安装***
 
 10. 下载busybox：
 
