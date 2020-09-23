@@ -5,7 +5,7 @@
 0. 在进行之后的安装前，先确保虚拟机内存、磁盘足够。个人配置：内存3G，磁盘40G。具体扩容方法自行搜索；
    注意：以下操作均在普通用户模式下进行，请不要切换到root用户，或随意使用sudo；
 
-1. 下载riscv-gnu-toolchain源码，链接：https://pan.zju.edu.cn/share/7793a0574d4b4dbeb85465f4ad；
+1. 下载riscv-gnu-toolchain源码，链接：https://pan.zju.edu.cn/share/7793a0574d4b4dbeb85465f4ad
 
 2. 将下载好的源码压缩包放入虚拟机合适的文件夹中，此处使用：~/Documents/linux4riscv/；
 
@@ -31,7 +31,7 @@
    sudo chmod a+rw cliff/opt/riscv
    ```
 
-7. 由于在此使用/home/cliff/opt/riscv作为安装文件夹，因此需要将/home/cliff/opt/riscv/bin加入环境变量PATH，具体方法参见链接：https://blog.csdn.net/White_Idiot/article/details/78253004；
+7. 由于在此使用/home/cliff/opt/riscv作为安装文件夹，因此需要将/home/cliff/opt/riscv/bin加入环境变量PATH，具体方法参见链接：https://blog.csdn.net/White_Idiot/article/details/78253004 
    注意：更改之后记得按链接中所说，重启或用source指令更新，并用`echo $PATH`检查是否已加入PATH；
 
 8. 将/home/cliff/opt/riscv设为可读写（同样使用chmod命令）；
