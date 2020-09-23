@@ -51,8 +51,7 @@
    bash ./configure --prefix=/home/cliff/opt/riscv
    ```
 
-2. 若前一步正常，运行：`make`；
-
+2. 若前一步正常，运行：`make`。这一步若出现`Permission denied`类型的报错，则重新调整一遍riscv-gnu-toolchain文件夹和/home/cliff/opt/riscv文件夹的权限，方法同前；
 
 3. make结束后，运行：`riscv64-unknown-elf-gcc`，若提示：`fatal error: no input files`，说明riscv64-unknown-elf-gcc现在已经存在了；
 
