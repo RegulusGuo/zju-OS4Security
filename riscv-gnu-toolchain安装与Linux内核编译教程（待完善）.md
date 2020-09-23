@@ -45,12 +45,14 @@
    bash ./configure --prefix=/home/cliff/opt/riscv
    ```
 
-2. 若前一步正常，运行：`make`，若提示：`ERROR: glib-2.40 gthread-2.0 is required to compile QEMU`，则参见链接https://blog.csdn.net/fuxy3/article/details/104732541
+2. 若前一步正常，运行：`make`；
 
 
 3. make结束后，运行：`riscv64-unknown-elf-gcc`，若提示：`fatal error: no input files`，说明riscv64-unknown-elf-gcc现在已经存在了；
 
-4. 现在安装qemu，这一步中会有各种提示信息，内容是缺少某某软件包，按照提示的用apt安装即可。以下是主要步骤
+4. 现在安装qemu，这一步中会有各种提示信息，内容是缺少某某软件包，按照提示的用apt安装即可。
+   例：若提示：`ERROR: glib-2.40 gthread-2.0 is required to compile QEMU`，则参见链接https://blog.csdn.net/fuxy3/article/details/104732541
+   以下是主要步骤
 
    ```
    cd qemu
