@@ -1,4 +1,4 @@
-# <center>riscv-gnu-toolchain安装与Linux内核编译教程（待完善）</center>
+# <center>riscv-gnu-toolchain安装与Linux内核编译教程</center>
 
 
 ### 一、准备工作
@@ -7,7 +7,7 @@
 
 1. 下载riscv-gnu-toolchain源码，链接：https://pan.zju.edu.cn/share/7793a0574d4b4dbeb85465f4ad
 
-2. 将下载好的源码压缩包放入虚拟机合适的文件夹中，此处使用：~/Documents/linux4riscv/；
+2. 将下载好的源码压缩包放入虚拟机合适的文件夹中，此处使用：~/Documents/linux4riscv/；（大家可自行决定）
 
 3. 在当前文件夹中解压（右键，“Extract Here”），得到文件夹riscv-gnu-toolchain；
 
@@ -23,12 +23,12 @@
    sudo apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
    ```
 
-6. 创建目录/home/cliff/opt/riscv并更改其权限
+6. 创建目录/opt/riscv并更改其权限
 
    ```
-   cd /home
-   sudo mkdir -p cliff/opt/riscv
-   sudo chmod a+rw cliff/opt/riscv
+   cd /opt
+   sudo mkdir riscv
+   sudo chmod a+rw /opt/riscv
    ```
 
 7. 由于在此使用/home/cliff/opt/riscv作为安装文件夹，因此需要将/home/cliff/opt/riscv/bin加入环境变量PATH，具体方法参见链接：https://blog.csdn.net/White_Idiot/article/details/78253004
@@ -40,7 +40,7 @@
    ```
    注意：更改之后记得按链接中所说，重启或用source指令更新，并用`echo $PATH`检查是否已加入PATH；
 
-8. 将/home/cliff/opt/riscv设为可读写（同样使用chmod命令）；
+8. 将/opt/riscv设为可读写（同样使用chmod命令）；
 
 
 ### 二、编译安装
@@ -52,10 +52,10 @@
    运行：
 
    ```
-   bash ./configure --prefix=/home/cliff/opt/riscv
+   bash ./configure --prefix=/opt/riscv
    ```
 
-2. 若前一步正常，运行：`make`。这一步若出现`Permission denied`类型的报错，则重新调整一遍riscv-gnu-toolchain文件夹和/home/cliff/opt/riscv文件夹的权限，方法同前；
+2. 若前一步正常，运行：`make -j$(nproc)`。这一步若出现`Permission denied`类型的报错，则重新调整一遍riscv-gnu-toolchain文件夹和/opt/riscv文件夹的权限，方法同前；
 
 3. make结束后，运行：`riscv64-unknown-elf-gcc`，若提示：`fatal error: no input files`，说明riscv64-unknown-elf-gcc现在已经存在了；
 
@@ -71,7 +71,7 @@
 
 5. 上一步完成后，运行：`qemu-system-riscv64 -version` ，有正常版本号等信息说明成功；
 
-6. 切回riscv-gnu-toolchain目录下，开始获取Linux内核源码。以下是从清华镜像站获取的：
+6. 切回riscv-gnu-toolchain目录下（此处目录并不重要，可自行选择），开始获取Linux内核源码。以下是从清华镜像站获取的：
 
    ```
    git clone https://mirrors.tuna.tsinghua.edu.cn/git/linux.git
@@ -80,7 +80,7 @@
 7. 上一步获得的源码位于riscv-gnu-toolchain目录下的linux文件夹里，进行以下步骤：
 
    ```
-   bash ./configure --prefix=/home/cliff/opt/riscv
+   bash ./configure --prefix=/opt/riscv
    make linux
    ```
 
