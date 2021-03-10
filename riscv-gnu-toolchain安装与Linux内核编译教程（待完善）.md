@@ -5,7 +5,7 @@
 0. **在进行之后的安装前，先确保虚拟机内存、磁盘足够。个人配置：内存3G，磁盘40G。具体扩容方法自行搜索；**
    ***注意：以下操作均在普通用户模式下进行，请不要切换到root用户，或随意使用sudo；***
 
-1. 下载riscv-gnu-toolchain源码，链接：https://pan.zju.edu.cn/share/7793a0574d4b4dbeb85465f4ad
+1. 下载riscv-gnu-toolchain源码，链接：https://pan.baidu.com/s/1JUw6RiNU2bzVi8g-RH9BTA  提取码：x1lc
 
 2. 将下载好的源码压缩包放入虚拟机合适的文件夹中，此处使用：~/Documents/linux4riscv/；（大家可自行决定）
 
