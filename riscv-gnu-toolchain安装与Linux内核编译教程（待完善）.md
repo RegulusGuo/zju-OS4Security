@@ -31,12 +31,12 @@
    sudo chmod a+rw /opt/riscv
    ```
 
-7. 由于在此使用/home/cliff/opt/riscv作为安装文件夹，因此需要将/home/cliff/opt/riscv/bin加入环境变量PATH，具体方法参见链接：https://blog.csdn.net/White_Idiot/article/details/78253004
+7. 由于在此使用/opt/riscv作为安装文件夹，因此需要将/opt/riscv/bin加入环境变量PATH（BTW，bin 一般表示binary，即最终编译出来为我们所用的二进制文件），具体方法参见链接：https://blog.csdn.net/White_Idiot/article/details/78253004
    
    特别注意：编辑前用chmod更改/etc/profile的权限，使其可写入；vim打开后，在文件最末尾添加：
    
    ```
-   export PATH=$PATH:/home/cliff/opt/riscv/bin
+   export PATH=$PATH:/opt/riscv/bin
    ```
    注意：更改之后记得按链接中所说，重启或用source指令更新，并用`echo $PATH`检查是否已加入PATH；
 
