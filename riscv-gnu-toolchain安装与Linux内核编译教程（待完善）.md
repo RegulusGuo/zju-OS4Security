@@ -93,17 +93,4 @@
    make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- defconfig
    make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j $(nproc)
    ```
-
-***注：以下步骤需根据老师选择使用的环境（老师说busybox有问题。。。）进行安装***
-
-10. 下载busybox：
-
-    ```
-    git clone https://git.busybox.net/busybox
-    cd busybox
-    CROSS_COMPILE=riscv64-unknown-linux-gnu- make defconfig
-    CROSS_COMPILE=riscv64-unknown-linux-gnu- make -j $(nproc)
-    ```
-后续工作尚未完成……
-    
-
+   
